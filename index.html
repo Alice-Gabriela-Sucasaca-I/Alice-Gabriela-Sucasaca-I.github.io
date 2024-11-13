@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice Gabriela Sucasaca Ilasaca</title>
+
+    <!-- Conexión con Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+
+    <!-- Font Awesome (iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Estilos CSS -->
+    <style>
+        /* General */
+        body 
+        {
+            font-family: 'Zilla Slab', serif;
+            background-color: #1a1a1a;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        a 
+        {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Cabecera */
+        .cabecera 
+        {
+            background-image: url('https://via.placeholder.com/1200x600'); /* Cambia esta URL por la imagen que desees */
+            background-size: cover;
+            background-position: center;
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .cabecera .titulo-pagina 
+        {
+            font-size: 2.5rem;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+            
+            font-family: 'Kode Mono', monospace;
+        }
+
+        /* Barra de navegación fija */
+        .barra-navegacion 
+        {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            z-index: 10;
+            font-family: 'Kode Mono', monospace;
+            /**/
+        }
+
+        .barra-navegacion a 
+        {
+            color: white;
+            margin: 0 20px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .barra-navegacion a:hover 
+        {
+            color: #f7a400;
+        }
+
+        /* Secciones */
+        section 
+        {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        /* Sobre mí */
+        #sobre-mi 
+        {
+            /*background-color: #2c1e3d;*/
+            background-color: #211e21;
+        }
+
+        #sobre-mi h2 
+        {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #f7a400;
+        }
+
+        #sobre-mi p 
+        {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        #sobre-mi img 
+        {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+
+        /* Hobbies */
+        #mis-hobbies 
+        {
+            background-color: #333;
+        }
+
+        #mis-hobbies h2 
+        {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #f7a400;
+        }
+
+        #mis-hobbies img
+        {
+            width: 400px;
+            margin-top: 20px;
+        }
+        /*---------------------------*/
+        .contenedor-hobbies 
+        {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .caja-hobbie
+        {
+            background-color: #444;
+            color: white;
+            padding: 20px;
+            width: 30%;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .caja-hobbie:hover 
+        {
+            background-color: #f7a400;
+        }
+
+        .caja-hobbie i 
+        {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        /*.--------------------------------------*/
+        /* Habilidades */
+        #mis-habilidades 
+        {
+            background-color: #444;
+        }
+
+        #mis-habilidades h2 
+        {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #f7a400;
+        }
+
+        .contenedor-habilidades 
+        {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .caja-habilidad 
+        {
+            background-color: #555;
+            color: white;
+            padding: 20px;
+            width: 30%;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .caja-habilidad:hover 
+        {
+            background-color: #f7a400;
+        }
+
+        .caja-habilidad i 
+        {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        /* Botones */
+        .btn 
+        {
+            background-color: #27133c;
+            color: white;
+            padding: 12px 25px;
+            margin: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover
+        {
+            background-color: #f7a400;
+            color: black;
+            background-color: rgb(255, 196, 102);  
+        }
+
+        /* Footer */
+        footer 
+        {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Sección de redes sociales */
+        .redes-sociales a 
+        {
+            font-size: 2rem;
+            color: white;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .redes-sociales a:hover 
+        {
+            color: #f7a400;
+        }
+                /* Contenedor de los cantantes */
+        .contenedor-cantantes 
+        {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        /* Caja de cada cantante */
+        .caja-cantante 
+        {
+            background-color: #555;
+            color: white;
+            width: 30%;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .caja-cantante img 
+        {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Hover para los contenedores de los cantantes */
+        .caja-cantante:hover 
+        {
+            background-color: #f7a400;
+        }
+
+        /* Títulos de los cantantes */
+        .caja-cantante h3 
+        {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Botones */
+        .caja-cantante a 
+        {
+            display: inline-block;
+            background-color: #27133c;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            /*
+            border: 2px solid transparent;
+             transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;*/
+           transition: background-color 0.3s ease;
+        }
+
+        .caja-cantante a:hover 
+        {
+            
+            background-color: #f7a400;
+            color: black;
+            background-color: rgb(255, 196, 102);  
+            /*color: #27133c;  
+            border: 2px solid #f7a400; */ /* Borde amarillo */
+        }
+         /* Compañeros */
+        #Compañeros 
+        {
+            background-color: #2c1e3d;
+        }
+
+        #Compañeros h2 
+        {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #f7a400;
+        }
+
+        #Compañeros p 
+        {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        /* Estilo normal del enlace */
+        a {
+            color: white;  /* El color normal del enlace */
+            text-decoration: none; /* Eliminar el subrayado por defecto */
+        }
+
+        /* Estilo del enlace cuando el mouse pasa sobre él */
+        a:hover {
+            color: #f7a400;  /* El color amarillo al pasar el mouse */
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Cabecera -->
+    <div class="cabecera">
+        <h1 class="titulo-pagina">Alice Gabriela</h1>
+    </div>
+
+    <!-- Barra de Navegación -->
+    <nav class="barra-navegacion">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#mis-hobbies">Hobbies</a>
+        <a href="#mis-habilidades">Habilidades</a>
+        <a href="#cantantes-favoritos">Cantantes Favoritos</a>
+        <a href="#Compañeros">Compañeros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- Sección: Sobre mí -->
+    <section id="sobre-mi" data-aos="fade-up">
+        <h2>Sobre mí</h2>
+        <p>Mi nombre es Alice Gabriela Sucasaca Ilasaca, tengo 18 años, actualmente me encuentro
+             en el segundo semestre de la carrera de 
+             <a href="https://cs.ucsp.edu.pe/" target="_blank" >Ciencia de la Computación</a>
+              en la <a href="https://www.ucsp.edu.pe/" target="_blank" >Universidad Católica San Pablo</a>
+
+              
+        </del></p>
+        <img src="https://via.placeholder.com/200" alt="Tu foto de perfil">
+    
+    </section>
+
+    <!-- Sección: Hobbies -->
+    <section id="mis-hobbies" data-aos="fade-up">
+        <h2>Mis Hobbies</h2>
+        <p>Dormir.</p>
+      <!--  <div>
+            <i class="fas fa-guitar"></i> <span>Tocar guitarra</span><br>
+            <i class="fas fa-headphones"></i> <span>Escuchar música</span><br>
+            <i class="fas fa-camera"></i> <span>Fotografía</span><br>
+        </div>
+        <img src="https://via.placeholder.com/400" alt="Imagen relacionada con tus hobbies">
+        <a href="#" class="btn">Poner imagen de hobby</a>-->
+        <div class="contenedor-hobbies">
+            <div class="caja-hobbie" data-aos="flip-left">
+                <i class="fas fa-guitar"></i>
+                <h3>Mis hobbies Musicales</h3>
+                <p>Uno de mis mayores hobbies es tocar instrumentos musicales, especialmente los de cuerda. La guitarra y el ukulele son mis favoritos, ya que 
+                    me permiten expresar emociones a través de la música. Estoy constantemente aprendiendo nuevas canciones y 
+                    técnicas, y me encantaría seguir expandiendo mis conocimientos musicales, explorando más géneros y aprendiendo otros instrumentos
+                </p>
+                <a href="https://es.wikipedia.org/wiki/Guitarra" target="_blank" class="btn">Descubre qué es la guitarra </a>
+                <a href="https://es.wikipedia.org/wiki/Ukelele" target="_blank" class="btn">Descubre qué es el ukulele </a>
+
+            </div>
+            <div class="caja-hobbie" data-aos="flip-left">
+                <i class="fas fa-book"></i>
+                <h3>Leer</h3>
+                <p>Leer es uno de mis pasatiempos favoritos. Uno de mis libros favoritos es <em>Demian</em> de Hermann Hesse,
+                    una obra que profundiza en el proceso de autodescubrimiento y la dualidad del ser humano.
+                </p>
+                 
+                <a href="https://es.wikipedia.org/wiki/Demian" target="_blank" class="btn"> <em>Demian</em> de Hermann Hesse</a>
+
+            </div>
+            <div class="caja-hobbie" data-aos="flip-left">
+                <i class="fas fa-table-tennis"></i> 
+                <h3>Tenis de mesa</h3>
+                <p>Me encanta jugar al tenis de mesa con mis amistades.
+                     Me ayuda a pasar un buen rato; es un pasatiempo muy divertido.</p>
+                     <a href="https://es.wikipedia.org/wiki/Tenis_de_mesa" target="_blank" class="btn"> Descubre qué es el Tenis de</a>
+
+            </div>
+        </div>
+    </section>
+
+    <!--  Habilidades -->
+    <section id="mis-habilidades" data-aos="fade-up">
+        <h2>Mis Habilidades</h2>
+        <div class="contenedor-habilidades">
+            <div class="caja-habilidad" data-aos="flip-left">
+                <i class="fas fa-code"></i>
+                <h3>Dormir</h3>
+                <p>Dormir</p>
+                <a href="#" class="btn">link</a>
+            </div>
+            <div class="caja-habilidad" data-aos="flip-left">
+                <i class="fas fa-paint-brush"></i>
+                <h3>nose</h3>
+                <p>:c</p>
+                <a href="#" class="btn">link</a>
+            </div>
+            <div class="caja-habilidad" data-aos="flip-left">
+                <i class="fas fa-camera"></i>
+                <h3>Fotografía</h3>
+                <p>Fotografía </p>
+                <a href="#" class="btn">link</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Cantantes Favoritos -->
+     <!--
+    <section id="cantantes-favoritos" data-aos="fade-up">
+        <h2>Mis Cantantes Favoritos</h2>
+        <p>Conoce mis cantantes favoritos y su música.</p>
+        <div>
+            <a href="https://es.wikipedia.org/wiki/Freddy_Mercury" class="btn">Freddy Mercury</a>
+            <a href="https://es.wikipedia.org/wiki/Ariana_Grande" class="btn">Ariana Grande</a>
+            <a href="https://es.wikipedia.org/wiki/Michael_Jackson" class="btn">Michael Jackson</a>
+        </div>
+    </section>
+-->
+    <!-- Sección: Cantantes Favoritos -->
+<section id="cantantes-favoritos" data-aos="fade-up">
+    <h2>Mis Cantantes Favoritos</h2>
+    <p>Conoce mis cantantes favoritos y su música.</p>
+    
+    <div class="contenedor-cantantes">
+        <div class="caja-cantante">
+            <img src="https://via.placeholder.com/300x300?text=Freddy+Mercury" alt="Freddy Mercury">
+            <h3>Freddy Mercury</h3>
+            <p> mi canción favorita es </p>
+            <a href="https://es.wikipedia.org/wiki/Freddy_Mercury" class="btn">Ver Wikipedia</a>
+        </div>
+        
+        <div class="caja-cantante">
+            <img src="https://via.placeholder.com/300x300?text=Ariana+Grande" alt="Ariana Grande">
+            <h3>Ariana Grande</h3>
+            <a href="https://es.wikipedia.org/wiki/Ariana_Grande" class="btn">Ver Wikipedia</a>
+        </div>
+        
+        <div class="caja-cantante">
+            <img src="https://via.placeholder.com/300x300?text=Michael+Jackson" alt="Michael Jackson">
+            <h3>Michael Jackson</h3>
+            <a href="https://es.wikipedia.org/wiki/Michael_Jackson" class="btn">Ver Wikipedia</a>
+        </div>
+    </div>
+</section>
+    
+    <!-- Sección: Compañeros -->
+    <section id="Compañeros" data-aos="fade-up">
+        <h2>Visita las paginas de mis compañeros</h2>
+        <p>poner link de compañerps </p>
+
+    
+    </section>
+    <!-- Sección: Contacto -->
+    <section id="contacto" data-aos="fade-up">
+        <h2>Contacto</h2>
+        <p>Si quieres saber más sobre mí o colaborar en algún proyecto, no dudes en ponerte en contacto.</p>
+        <p>Email: alice@gmail.com</p>
+        <div class="redes-sociales">
+            <a href="#" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="https://github.com/tu-usuario" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            
+        </div>
+        <a href="#" class="btn">Contactar</a>
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+        <p>© 2024 Mi Página Personal - Todos los derechos reservados obvio</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script> <!-- AOS Animations -->
+    <script>
+        AOS.init
+        (
+            {
+            duration: 1200, // Duración de la animación
+            }
+        );
+    </script>
+
+</body>
+
+</html>

@@ -37,8 +37,7 @@
             color: white;
         }
 
-        /* Cabecera */
-        /* Cabecera */
+      
 
         .cabecera
      {
@@ -58,12 +57,13 @@
         text-align: center;
         color: white;
         position: relative;
-        background-attachment: scroll;
+        /*background-attachment: scroll;*/
+        background-attachment: fixed;
         z-index: 0;
         overflow: hidden; 
     }
  
-     /*background-attachment: fixed;*/
+     
 
        
         
@@ -130,6 +130,7 @@
         }
 */
         /* Barra de navegación */
+        
         .barra-navegacion 
         {
             position: sticky;
@@ -152,12 +153,13 @@
             margin: 0 20px; 
             font-size: 1rem;
             text-transform: uppercase;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
         .barra-navegacion a:hover 
         {
             color: #f7a400;
+            transform: translateY(-3px);
         }
 
         /* S */
@@ -171,14 +173,16 @@
 
                 /* Sobre mí */
     
-        #sobre-mi {
+        #sobre-mi 
+        {
             width: 100%;
             background-color: #211e21;
             padding: 40px 0; 
             box-sizing: border-box;
         }
 
-        #sobre-mi .contenido {
+        #sobre-mi .contenido 
+        {
             max-width: 800px; 
             margin: 0 auto; 
             padding-left: 3cm; 
@@ -186,19 +190,22 @@
             text-align: left;  
         }
 
-        #sobre-mi h2 {
+        #sobre-mi h2 
+        {
             font-size: clamp(2rem, 5vw, 2.5rem); 
             margin-bottom: 20px;
             color: #f7a400;
         }
 
-        #sobre-mi p {
+        #sobre-mi p 
+        {
             font-size: 1.2rem;
             margin-bottom: 30px;
             line-height: 1.6; 
         }
-
-        #sobre-mi img {
+        /*
+        #sobre-mi img 
+        {
             width: 200px;
             height: 200px;
             border-radius: 50%;
@@ -209,6 +216,7 @@
             margin-left: auto;
             margin-right: auto;
         }
+            */
         /* Hobbies */
         #mis-hobbies 
         {
@@ -345,7 +353,7 @@
 
         .caja-Cursos:hover 
         {
-            background-color: #f7a400;
+            background-color: rgb(0, 0, 0); 
         }
 
         .caja-Cursos i 
@@ -356,7 +364,7 @@
         /* Botones */
         .btn 
         {
-            background-color: #27133c;
+            background-color: #1e0f2d;
             color: white;
             padding: 12px 25px;
             margin: 20px;
@@ -454,7 +462,7 @@
         .caja-cantante a 
         {
             display: inline-block;
-            background-color: #27133c;
+            background-color: #1e0f2d;
             color: white;
             padding: 12px 25px;
             text-decoration: none;
@@ -477,7 +485,9 @@
          /* Compañeros */
         #Compañeros 
         {
-            background-color: #2c1e3d;
+            background-color: #211e21;
+            padding: 50px 20px;
+            text-align: center;
         }
 
         #Compañeros h2 
@@ -509,7 +519,8 @@
         @media screen and (max-width: 768px) {
             .cabecera
              {
-                background-attachment: scroll; 
+                /*background-attachment: scroll;*/
+                background-attachment: fixed;
                 height: 100vh; 
                 background-size: cover; 
                 background-position: center center;
@@ -518,25 +529,29 @@
                 margin: 0; 
                 padding: 0; 
             }
-            .cabecera .titulo-pagina {
+            .cabecera .titulo-pagina
+            {
                 font-size: 2.5rem;
             }
 
-            .cabecera .subtitulo {
+            .cabecera .subtitulo 
+            {
                 font-size: 1rem;
                 padding-left: 10px;
             }
 
             .contenedor-hobbies,
             .contenedor-habilidades,
-            .contenedor-cantantes {
+            .contenedor-cantantes 
+            {
                 flex-direction: column;
                 align-items: center;
             }
 
             .caja-hobbie,
             .caja-habilidad,
-            .caja-cantante {
+            .caja-cantante 
+            {
                 width: 45%;
                 margin-bottom: 10px;
             }
@@ -547,36 +562,44 @@
             }
         }
 
-        @media screen and (max-width: 480px) {
-            .cabecera .titulo-pagina {
+        @media screen and (max-width: 480px) 
+        {
+            .cabecera .titulo-pagina 
+            {
                 font-size: 2rem;
             }
 
-            .cabecera .subtitulo {
+            .cabecera .subtitulo 
+            {
                 font-size: 1rem;
             }
 
             .caja-hobbie,
             .caja-habilidad,
-            .caja-cantante {
+            .caja-cantante 
+            {
                 width: 90%;
             }
         }
                
-        @media (max-width: 768px) {
-            #sobre-mi h2 {
+        @media (max-width: 768px) 
+        {
+            #sobre-mi h2 
+            {
                 font-size: clamp(1.5rem, 5vw, 2rem); 
             }
 
-            #sobre-mi p {
+            #sobre-mi p 
+            {
                 font-size: 1rem;
                 max-width: 95%;
             }
-
-            #sobre-mi img {
+            /*
+            #sobre-mi img 
+            {
                 width: 150px;  
             }
-
+            */
           
             #sobre-mi .contenido {
                 padding-left: 2cm;
@@ -584,27 +607,58 @@
             }
         }
 
-        @media (max-width: 480px) {
-            #sobre-mi h2 {
+        @media (max-width: 480px) 
+        {
+            #sobre-mi h2 
+            {
                 font-size: clamp(1.2rem, 5vw, 1.5rem); 
             }
 
-            #sobre-mi p {
+            #sobre-mi p
+            {
                 font-size: 0.9rem;
                 max-width: 90%;
             }
-
-            #sobre-mi img {
+            /*
+            #sobre-mi img 
+            {
                 width: 120px; 
             }
-
+            */
           
-            #sobre-mi .contenido {
+            #sobre-mi .contenido 
+            {
                 padding-left: 1cm;
                 padding-right: 1cm;
             }
         }
+               
+        @media (max-width: 768px) 
+        {
+            .barra-navegacion 
+            {
+                padding: 10px 15px; 
+            }
+            .barra-navegacion a 
+            {
+                font-size: 0.9rem; 
+                margin: 8px 15px; 
+            }
+        }
 
+   
+        @media (max-width: 480px) 
+        {
+            .barra-navegacion a 
+            {
+                font-size: 0.8rem;
+                margin: 8px 10px; 
+            }
+            .barra-navegacion 
+            {
+                justify-content: space-around; 
+            }
+        }
     </style>
 </head>
 
@@ -620,7 +674,7 @@
     <nav class="barra-navegacion">
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#mis-hobbies">Hobbies</a>
-        <a href="#mis-habilidades">Habilidades</a>
+        <!--<a href="#mis-habilidades">Habilidades</a>-->
         <a href="#mis-cursos">Cursos</a>
         <a href="#cantantes-favoritos">Gustos Musicales</a>
         <a href="#Compañeros">Compañeros</a>
@@ -637,7 +691,7 @@
 
               
         </del></p>
-        <img src="https://via.placeholder.com/200" alt="Tu foto de perfil">
+        <!--<img src="https://via.placeholder.com/200" alt="Tu foto de perfil">-->
     
     </section>
 
@@ -685,8 +739,54 @@
         </div>
     </section>
 
-    <!--  Habilidades -->
-    <section id="mis-habilidades" data-aos="fade-up">
+ 
+   <!--  Cursos -->
+   <section id="mis-cursos" data-aos="fade-up">
+    <h2>Cursos que llevo este semestre</h2>
+    <div class="contenedor-Cursos">
+        
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-code"></i>
+            <h3>Introducción a Ciencia de la Computación </h3>
+            <a href="https://ecuadros.blogspot.com/" target="_blank" > Ernesto Cuadros-Vargas</a>   
+        </div> 
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-code"></i>
+            <h3>Ciencia de la Computación 1</h3>
+            <a href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=54641" target="_blank" > Manuel Eduardo Loaiza Fernandez</a>   
+           
+        </div>
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-code"></i>
+            <h3>Estructuras discretas 2</h3>
+            <a href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=11109" target="_blank" > Luis Díaz Basurco</a>   
+        
+        </div>
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-book"></i>
+            <h3>Matemática 2 </h3>
+            <a href="https://dina.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=64121" target="_blank" > Ingrid Zayda Villanueva Vega</a>   
+        
+        </div>
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-book"></i>
+            <h3>Introducción a la Filosofía </h3>
+            <a href="" target="_blank" > Pierina Pacheco Leyton </a>   
+        
+        </div>
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-guitar"></i>
+            <h3>Apreciación Musical </h3>
+            <a href="https://pe.linkedin.com/in/patricia-valencia-pajuelo-805b2756" target="_blank" > Patricia del Carmen Valencia Pajuelo</a>   
+        
+        </div>
+     
+        <a href="https://cs.ucsp.edu.pe/wp-content/uploads/2021/04/Malla-curricular-Ciencia-de-la-Computacion.pdf" target="_blank" > Malla Curricular de Ciencia de la Computación</a>   
+    </div>
+</section>
+      <!--  Habilidades -->
+        <!--
+      <section id="mis-habilidades" data-aos="fade-up">
         <h2>Mis Habilidades</h2>
         <div class="contenedor-habilidades">
             <div class="caja-habilidad" data-aos="flip-left">
@@ -709,41 +809,7 @@
             </div>
         </div>
     </section>
-   <!--  Cursos -->
-   <section id="mis-cursos" data-aos="fade-up">
-    <h2>Cursos</h2>
-    <div class="contenedor-Cursos">
-        
-        <div class="caja-Cursos" data-aos="flip-left">
-            <i class="fas fa-code"></i>
-            <h3>Introducción a Ciencia de la Computación </h3>
-        </div> 
-        <div class="caja-Cursos" data-aos="flip-left">
-            <i class="fas fa-code"></i>
-            <h3>Ciencia de la Computación 1</h3>
-           
-        </div>
-        <div class="caja-Cursos" data-aos="flip-left">
-            <i class="fas fa-code"></i>
-            <h3>Estructuras discretas 2</h3>
-        </div>
-        <div class="caja-Cursos" data-aos="flip-left">
-            <i class="fas fa-book"></i>
-            <h3>Matemática 2 </h3>
-        </div>
-        <div class="caja-Cursos" data-aos="flip-left">
-            <i class="fas fa-book"></i>
-            <h3>Introducción a la Filosofía </h3>
-        </div>
-        <div class="caja-Cursos" data-aos="flip-left">
-            <i class="fas fa-guitar"></i>
-            <h3>Apreciación Musical </h3>
-        </div>
-     
-        <a href="https://cs.ucsp.edu.pe/wp-content/uploads/2021/04/Malla-curricular-Ciencia-de-la-Computacion.pdf" target="_blank" > Malla Curricular de Ciencia de la Computación</a>   
-    </div>
-</section>
-   
+    -->
     <!-- Cantantes Favoritos -->
 <section id="cantantes-favoritos" data-aos="flip-left">
     <h2>Gustos Musicales</h2>
@@ -752,33 +818,34 @@
     <div class="contenedor-cantantes">
         <!--1-->
         <div class="caja-cantante">
-            <img src="img/The Weeknd.jpg" alt="The weeknd">
-            <h3>The weeknd</h3>
+            <img src="img/The Weeknd.jpg">
+            <h3></h3>
             
             <a href="https://open.spotify.com/intl-es/artist/1Xyo4u8uXC1ZmMpatF05PJ?si=05WEP5l7QlCZ5LVw0bbi8g" target="_blank" class="spotify-link">
-                <i class="fab fa-spotify"></i> Escuchar en Spotify
+                <i class="fab fa-spotify"></i> The weeknd
             </a>
         </div>
         <!--2-->
         <div class="caja-cantante">
-            <img src="img/Chase atlantic.jpg" alt="Chase Atlantic">
-            <h3>Chase Atlantic</h3>
+            <img src="img/Chase atlantic.jpg">
+            <h3></h3>
             <a href="https://open.spotify.com/intl-es/artist/7cYEt1pqMgXJdq00hAwVpT?si=qovXI0BQTqm1mQvoXa_aHQ" target="_blank" class="spotify-link">
-                <i class="fab fa-spotify"></i> Escuchar en Spotify
+                <i class="fab fa-spotify"></i> Chase Atlantic
             </a>
         </div>
         <!--3-->
         <div class="caja-cantante">
-            <img src="img/The Strokes.jpg" alt="The Strokes">
-            <h3>The Strokes</h3>
+            <img src="img/The Strokes.jpg" >
+            <h3></h3>
             <a href="https://open.spotify.com/intl-es/artist/0epOFNiUfyON9EYx7Tpr6V?si=Z-8o45xvRAC-3131sDR-RA" target="_blank" class="spotify-link">
-                <i class="fab fa-spotify"></i> Escuchar en Spotify
+                <i class="fab fa-spotify"></i> The Strokes
             </a>
         </div>
         <!--4-->
         <div class="caja-cantante">
-            <img src="img/VideoClub.jpg" alt="Adele Castillon">
-            <h3>Adèle Castillon - VideoClub</h3>
+            <img src="img/VideoClub.jpg">
+           <!-- <h3>Adèle Castillon - VideoClub</h3>-->
+            <h3 h3></h3>
             <a href="https://open.spotify.com/intl-es/artist/4ueh4hmRvt62k4BgP8dIS0?si=eHtl-VuETDibScILhqaqXw" target="_blank" class="spotify-link">
                 <i class="fab fa-spotify"></i> Adèle Castillon
             </a>
@@ -788,68 +855,68 @@
         </div>
         <!--5-->
         <div class="caja-cantante">
-            <img src="img/Centimillimental.jpg" alt="The Strokes">
-            <h3>Centimillimental</h3>
+            <img src="img/Centimillimental.jpg" >
+            <h3></h3>
             <a href="https://open.spotify.com/intl-es/artist/0aRqEPPTtQd3pGuB4tJxVw?si=GBPivva9SB6RW_vcs4ZZpg" target="_blank" class="spotify-link">
-                <i class="fab fa-spotify"></i> Escuchar en Spotify
+                <i class="fab fa-spotify"></i> Centimillimental
             </a>
         </div>
         <!--6-->
         <div class="caja-cantante">
-            <img src="img/Joe Hisaishi.jpg" alt="The Strokes">
-            <h3>Joe Hisaishi</h3>
+            <img src="img/Joe Hisaishi.jpg">
+            <h3></h3>
             <a href="https://open.spotify.com/intl-es/artist/7nzSoJISlVJsn7O0yTeMOB?si=tnL-CROcSyGscFcQ-R2-6w" target="_blank" class="spotify-link">
-                <i class="fab fa-spotify"></i> Escuchar en Spotify
+                <i class="fab fa-spotify"></i> Joe Hisaishi
             </a>
         </div>
         <!--7-->
         <div class="caja-cantante">
-            <img src="img/Pedro Suarez Vertiz.jpg" alt="The Strokes">
+            <img src="img/Pedro Suarez Vertiz.jpg" >
             <h3>Pedro Suárez Vértiz</h3>
             <a href="https://open.spotify.com/intl-es/artist/3Azj8v21CQ76AVvjuNv5Vg?si=1G58x7P2TuK3Vw4WTuEWIg" target="_blank" class="spotify-link">
-                <i class="fab fa-spotify"></i> Escuchar en Spotify
+                <i class="fab fa-spotify"></i> Pedro Suárez Vértiz
             </a>
         </div>
          <!--8-->
          <div class="caja-cantante">
-            <img src="img/Françoise Hardy.jpg" alt="The Strokes">
-            <h3>Françoise Hardy</h3>
+            <img src="img/Françoise Hardy.jpg" >
+            <h3></h3>
             <a href="https://open.spotify.com/intl-es/artist/7x3f7c0fBanNlQwpx1255g?si=Dl_O_w65SmiJAxdHIvSQgw" target="_blank" class="spotify-link">
-                <i class="fab fa-spotify"></i> Escuchar en Spotify
+                <i class="fab fa-spotify"></i> Françoise Hardy
             </a>
         </div>
          <!--9-->
          <div class="caja-cantante">
-            <img src="img/Hombres G.jpg" alt="The Strokes">
-            <h3>Hombres G</h3>
+            <img src="img/Hombres G.jpg" >
+            <h3></h3>
             <a href="https://open.spotify.com/intl-es/artist/60uh2KYYSCqAgJNxcU4DA0?si=qavlzUzyR9qZNfZSogZYrQ" target="_blank" class="spotify-link">
-                <i class="fab fa-spotify"></i> Escuchar en Spotify
+                <i class="fab fa-spotify"></i> Hombres G
             </a>
         </div>
          <!--10-->
          <div class="caja-cantante">
-            <img src="img/Lady Gaga.jpg" alt="The Strokes">
-            <h3>Lady Gaga</h3>
+            <img src="img/Lady Gaga.jpg">
+            <h3></h3>
             <a href="https://open.spotify.com/intl-es/artist/1HY2Jd0NmPuamShAr6KMms?si=Tr6lgg4JTB2bE9wdrzZSPQ" target="_blank" class="spotify-link">
-                <i class="fab fa-spotify"></i> Escuchar en Spotify
+                <i class="fab fa-spotify"></i> Lady Gaga
             </a>
         </div>
         
          <!--11-->
          <div class="caja-cantante">
-            <img src="img/Artic Monkeys.jpg" alt="The Strokes">
-            <h3>Artic Monkeys</h3>
+            <img src="img/Artic Monkeys.jpg">
+            <h3></h3>
             <a href="https://open.spotify.com/intl-es/artist/7Ln80lUS6He07XvHI8qqHH?si=O7er1zo1R02zPHoE0c213w" target="_blank" class="spotify-link">
-                <i class="fab fa-spotify"></i> Escuchar en Spotify
+                <i class="fab fa-spotify"></i> Artic Monkeys
             </a>
         </div>
         
          <!--12-->
          <div class="caja-cantante">
             <img src="img/The Neighbourhood.jpg" alt="The Strokes">
-            <h3>The Neighbourhood</h3>
+            <h3></h3>
             <a href="https://open.spotify.com/intl-es/artist/77SW9BnxLY8rJ0RciFqkHh?si=xl0n7NjsSSOT7jPVuHky_w" target="_blank" class="spotify-link">
-                <i class="fab fa-spotify"></i> Escuchar en Spotify
+                <i class="fab fa-spotify"></i> The Neighbourhood
             </a>
         </div>
 <!--
@@ -884,23 +951,26 @@
     <!--  Compañeros -->
     <section id="Compañeros" data-aos="fade-up">
         <h2>Visita las paginas de mis compañeros</h2>
-        <p>poner link de compañerps </p>
+        <p>
+            <a href="https://mv1323.github.io/miguelvilchezgustavson.github.io/" target="_blank" class="btn">Miguel Vilchez</a>
+            <a href="https://jose-alejandro-sabino-romero-salas.github.io/" target="_blank" class="btn">Alejandro Romero</a>
+        <p>        
+           
+        </p>
 
-    
     </section>
     <!--  Contacto -->
     <section id="contacto" data-aos="fade-up">
         <h2>Contacto</h2>
         <p>Si quieres saber más sobre mí o colaborar en algún proyecto, no dudes en ponerte en contacto.</p>
-        <p>Email: alice@gmail.com</p>
+        <p>Email: alice.sucasaca@ucsp.edu.pe</p>
         <div class="redes-sociales">
-            <a href="#" class="fab fa-facebook"></a>
-            <a href="#" class="fab fa-twitter"></a>
+            <!--
             <a href="#" class="fab fa-spotify"></a>
-            <!--<a href="#" class="fab fa-linkedin"></a>-->
+            
             <a href=" https://pe.linkedin.com/in/alice-gabriela-sucasaca-ilasaca-644187329" target="_blank">
                 <i class="fab fa-instagram"></i> 
-
+            -->
             <a href=" https://pe.linkedin.com/in/alice-gabriela-sucasaca-ilasaca-644187329" target="_blank">
                 <i class="fab fa-linkedin"></i> 
             <a href="https://https:github.com/Alice-Gabriela-Sucasaca-I" target="_blank">
@@ -908,12 +978,12 @@
             </a>
             
         </div>
-        <a href="#" class="btn">Contactar</a>
+      <!--  <a href="#" class="btn">Contactar</a> -->
     </section>
 
     
     <footer>
-        <p>© 2024 Mi Página Personal - Todos los derechos reservados obvio</p>
+        <p>© 2024  Alice-Gabriela-S-I </p>
     </footer>
 
     

@@ -57,8 +57,8 @@
         text-align: center;
         color: white;
         position: relative;
-        /*background-attachment: scroll;*/
-        background-attachment: fixed;
+        background-attachment: scroll;
+        /*background-attachment: fixed;*/
         z-index: 0;
         overflow: hidden; 
     }
@@ -80,7 +80,8 @@
             
         }
 
-        .cabecera .titulo-pagina {
+        .cabecera .titulo-pagina 
+        {
             /*font-size: 3rem;*/
             font-size: clamp(2rem, 6vw, 3rem);
             text-shadow: 3px 3px 5px rgba(56, 46, 46, 0.7);
@@ -96,13 +97,17 @@
             z-index: 2;
             padding-left: 30px;
         }
-        /* Agregar un efecto suave al título */
-        .titulo-pagina {
+        
+
+        .titulo-pagina
+        {
             transition: transform 0.5s ease-out;
         }
 
-        .titulo-pagina:hover {
-            transform: scale(1.1);  /* Un pequeño zoom al pasar el ratón */
+        .titulo-pagina:hover 
+        {
+            transform: scale(1.1);  
+            
         }
 
 
@@ -129,7 +134,7 @@
             transition: color 0.3s ease;
         }
 */
-        /* Barra de navegación */
+        
         
         .barra-navegacion 
         {
@@ -171,7 +176,7 @@
             width: 100%;
         }
 
-                /* Sobre mí */
+
     
         #sobre-mi 
         {
@@ -217,7 +222,7 @@
             margin-right: auto;
         }
             */
-        /* Hobbies */
+ 
         #mis-hobbies 
         {
             background-color: #211e21;
@@ -241,7 +246,7 @@
             max-width: 400px;
             margin-top: 20px;
         }
-        /*---------------------------*/
+
         .contenedor-hobbies 
         {
             display: flex;
@@ -264,7 +269,8 @@
 
         .caja-hobbie:hover 
         {
-            background-color: #f7a400;
+           background-color: #f7a400;
+           /*background-color: #000000;*/
         }
 
         .caja-hobbie i 
@@ -272,7 +278,7 @@
             font-size: 3rem;
             margin-bottom: 10px;
         }
-        /*.--------------------------------------*/
+  
         /* Habilidades */
         #mis-habilidades 
         {
@@ -347,7 +353,7 @@
             width: 30%;
             border-radius: 10px;
             text-align: center;
-            margin-bottom: 20px;
+            margin: 0 auto 20px auto;
             transition: background-color 0.3s ease;
         }
 
@@ -361,7 +367,7 @@
             font-size: 3rem;
             margin-bottom: 10px;
         }
-        /* Botones */
+
         .btn 
         {
             background-color: #1e0f2d;
@@ -448,6 +454,7 @@
         .caja-cantante:hover 
         {
             background-color: #f7a400;
+            /*background-color: #000000;*/
         }
 
      
@@ -476,7 +483,7 @@
         .caja-cantante a:hover 
         {
             
-            background-color: #f7a400;
+            background-color: #f7a400; 
             color: black;
             background-color: rgb(255, 196, 102);  
             /*color: #27133c;  
@@ -519,8 +526,8 @@
         @media screen and (max-width: 768px) {
             .cabecera
              {
-                /*background-attachment: scroll;*/
-                background-attachment: fixed;
+                background-attachment: scroll;
+                /*background-attachment: fixed;*/
                 height: 100vh; 
                 background-size: cover; 
                 background-position: center center;
@@ -659,18 +666,27 @@
                 justify-content: space-around; 
             }
         }
+        @media (max-width: 480px) 
+        {
+            .caja-Cursos
+             {
+                padding: 15px;
+                width: 90%; 
+                max-width: 90%; 
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Cabecera -->
+
     <div class="cabecera">
         <h1 class="titulo-pagina"> Hola soy, Alice Gabriela</h1>
-        <p class="subtitulo">Estudiante de Computer Science</p>
+        <p class="subtitulo">Computer Science student</p>
     </div>
 
-    <!-- Barra de Navegación -->
+
     <nav class="barra-navegacion">
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#mis-hobbies">Hobbies</a>
@@ -681,7 +697,6 @@
         <a href="#contacto">Contacto</a>
     </nav>
 
-    <!--Sobre mí -->
     <section id="sobre-mi" data-aos="fade-up">
         <h2>Sobre mí</h2>
         <p>Mi nombre es Alice Gabriela Sucasaca Ilasaca, tengo 18 años, actualmente me encuentro
@@ -691,14 +706,14 @@
 
               
         </del></p>
-        <!--<img src="https://via.placeholder.com/200" alt="Tu foto de perfil">-->
+
     
     </section>
 
     <!-- Hobbies -->
     <section id="mis-hobbies" data-aos="fade-up">
         <h2>Mis Hobbies</h2>
-        <p>Dormir.</p>
+        <p></p>
       <!--  <div>
             <i class="fas fa-guitar"></i> <span>Tocar guitarra</span><br>
             <i class="fas fa-headphones"></i> <span>Escuchar música</span><br>
@@ -810,7 +825,7 @@
         </div>
     </section>
     -->
-    <!-- Cantantes Favoritos -->
+   
 <section id="cantantes-favoritos" data-aos="flip-left">
     <h2>Gustos Musicales</h2>
     <p>Conoce mis cantantes favoritos y su música.</p>
@@ -846,9 +861,11 @@
             <img src="img/VideoClub.jpg">
            <!-- <h3>Adèle Castillon - VideoClub</h3>-->
             <h3 h3></h3>
+            <p> <p>
             <a href="https://open.spotify.com/intl-es/artist/4ueh4hmRvt62k4BgP8dIS0?si=eHtl-VuETDibScILhqaqXw" target="_blank" class="spotify-link">
                 <i class="fab fa-spotify"></i> Adèle Castillon
             </a>
+            <p> <p></p>
             <a href="https://open.spotify.com/intl-es/artist/3rp4f58JlRHkk8hpdLCer1?si=4JPvoQlpTQuPkqdwSt49GA" target="_blank" class="spotify-link">
                 <i class="fab fa-spotify"></i> VideoClub
             </a>
@@ -950,7 +967,7 @@
     
     <!--  Compañeros -->
     <section id="Compañeros" data-aos="fade-up">
-        <h2>Visita las paginas de mis compañeros</h2>
+        <h2>Visita las páginas de mis compañeros</h2>
         <p>
             <a href="https://mv1323.github.io/miguelvilchezgustavson.github.io/" target="_blank" class="btn">Miguel Vilchez</a>
             <a href="https://jose-alejandro-sabino-romero-salas.github.io/" target="_blank" class="btn">Alejandro Romero</a>
@@ -970,10 +987,12 @@
             
             <a href=" https://pe.linkedin.com/in/alice-gabriela-sucasaca-ilasaca-644187329" target="_blank">
                 <i class="fab fa-instagram"></i> 
-            -->
+            --><a href=" https://www.instagram.com/eial._.g/" target="_blank">
+                <i class="fab fa-instagram"></i> 
+            
             <a href=" https://pe.linkedin.com/in/alice-gabriela-sucasaca-ilasaca-644187329" target="_blank">
                 <i class="fab fa-linkedin"></i> 
-            <a href="https://https:github.com/Alice-Gabriela-Sucasaca-I" target="_blank">
+            <a href="https://github.com/Alice-Gabriela-Sucasaca-I" target="_blank">
                 <i class="fab fa-github"></i> 
             </a>
             

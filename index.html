@@ -13,8 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
-
-    <!--  (iconos) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!--  -->
@@ -27,6 +25,7 @@
             color: white;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
 
         a 
@@ -37,23 +36,24 @@
 
         /* Cabecera */
         /* Cabecera */
-.cabecera {
-    background-image: url('img/fonditocool.jpg'); /* Cambia la imagen de fondo aquí */
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
-    width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
-    display: flex;
-    justify-content: flex-start; 
-    align-items: center;
-    padding-left: 5%; /* Ajusta el valor según lo necesites para responsividad */
-    text-align: center;
-    color: white;
-    position: relative;
-    background-attachment: scroll; /* Mejor compatibilidad en móviles */
-    z-index: 0;
-    overflow: hidden; /* Asegura que no haya desbordamiento de la imagen */
-}
+    .cabecera
+     {
+        background-image: url('img/fonditocool.jpg'); /* Cambia la imagen de fondo aquí */
+        background-size: cover;
+        background-position: center;
+        height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+        width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+        display: flex;
+        justify-content: flex-start; 
+        align-items: center;
+        padding-left: 5%; /* Ajusta el valor según lo necesites para responsividad */
+        text-align: center;
+        color: white;
+        position: relative;
+        background-attachment: scroll; /* Mejor compatibilidad en móviles */
+        z-index: 0;
+        overflow: hidden; /* Asegura que no haya desbordamiento de la imagen */
+    }
 
 
         
@@ -83,7 +83,7 @@
             padding-left: 30px;
         }
 
-       
+  /*     
         .barra-navegacion 
         {
             position: sticky;
@@ -94,13 +94,39 @@
             text-align: center;
             z-index: 10;
             font-family: 'Kode Mono', monospace;
-            /**/
+            
         }
 
         .barra-navegacion a 
         {
             color: white;
             margin: 0 20px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+*/
+        /* Barra de navegación */
+        .barra-navegacion 
+        {
+            position: sticky;
+            top: 0;
+            width: 100%; 
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            z-index: 10;
+            font-family: 'Kode Mono', monospace;
+            display: flex; /* Usamos flexbox para centrar los enlaces */
+            justify-content: center; /* Centra los enlaces en el contenedor */
+            align-items: center; /* Asegura que los enlaces se alineen verticalmente en el centro */
+        }
+
+        /* Estilo de los enlaces dentro de la barra de navegación */
+        .barra-navegacion a
+         {
+            color: white;
+            margin: 0 20px; /* Espaciado entre los enlaces */
             font-size: 1rem;
             text-transform: uppercase;
             transition: color 0.3s ease;
@@ -165,7 +191,12 @@
 
         #mis-hobbies img
         {
+            /*
             width: 400px;
+            margin-top: 20px;
+        */
+             width: 100%;
+            max-width: 400px;
             margin-top: 20px;
         }
         /*---------------------------*/
@@ -433,7 +464,52 @@
         {
             color: #f7a400;  
         }
+        /* Media Queries para responsividad */
+        @media screen and (max-width: 768px) {
+            .cabecera .titulo-pagina {
+                font-size: 2.5rem;
+            }
 
+            .cabecera .subtitulo {
+                font-size: 1rem;
+                padding-left: 10px;
+            }
+
+            .contenedor-hobbies,
+            .contenedor-habilidades,
+            .contenedor-cantantes {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .caja-hobbie,
+            .caja-habilidad,
+            .caja-cantante {
+                width: 80%;
+                margin-bottom: 10px;
+            }
+
+            .barra-navegacion a {
+                font-size: 0.9rem;
+                margin: 0 10px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .cabecera .titulo-pagina {
+                font-size: 2rem;
+            }
+
+            .cabecera .subtitulo {
+                font-size: 1rem;
+            }
+
+            .caja-hobbie,
+            .caja-habilidad,
+            .caja-cantante {
+                width: 90%;
+            }
+        }
 
     </style>
 </head>

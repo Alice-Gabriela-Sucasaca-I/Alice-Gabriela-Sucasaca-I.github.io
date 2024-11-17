@@ -38,21 +38,23 @@
         /* Cabecera */
     .cabecera
      {
-        background-image: url('img/fonditocool.jpg'); /* Cambia la imagen de fondo aquí */
+        background-image: url('img/fonditocool.jpg'); 
         background-size: cover;
         background-position: center;
-        height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
-        width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+        background-repeat: no-repeat; /**/
+        height: 100vh; 
+        width: 100%; 
         display: flex;
         justify-content: flex-start; 
         align-items: center;
-        padding-left: 5%; /* Ajusta el valor según lo necesites para responsividad */
+        padding-left: 5%;
         text-align: center;
         color: white;
         position: relative;
-        background-attachment: scroll; /* Mejor compatibilidad en móviles */
+        background-attachment: fixed;
+        /*background-attachment: scroll;*/
         z-index: 0;
-        overflow: hidden; /* Asegura que no haya desbordamiento de la imagen */
+        overflow: hidden; 
     }
 
 
@@ -117,16 +119,16 @@
             text-align: center;
             z-index: 10;
             font-family: 'Kode Mono', monospace;
-            display: flex; /* Usamos flexbox para centrar los enlaces */
-            justify-content: center; /* Centra los enlaces en el contenedor */
-            align-items: center; /* Asegura que los enlaces se alineen verticalmente en el centro */
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
         }
 
-        /* Estilo de los enlaces dentro de la barra de navegación */
+      
         .barra-navegacion a
          {
             color: white;
-            margin: 0 20px; /* Espaciado entre los enlaces */
+            margin: 0 20px; 
             font-size: 1rem;
             text-transform: uppercase;
             transition: color 0.3s ease;
@@ -464,8 +466,14 @@
         {
             color: #f7a400;  
         }
-        /* Media Queries para responsividad */
+        
         @media screen and (max-width: 768px) {
+            .cabecera
+             {
+                background-attachment: scroll; 
+                height: 100vh; 
+                background-size: cover; 
+            }
             .cabecera .titulo-pagina {
                 font-size: 2.5rem;
             }

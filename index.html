@@ -7,20 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alice Gabriela Sucasaca Ilasaca</title>
 
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
 
-    
+    <!--  (iconos) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    
+    <!--  -->
     <style>
-     
+        /* General */
         body 
         {
             font-family: 'Zilla Slab', serif;
@@ -36,27 +35,48 @@
             color: white;
         }
 
-       
+        /* Cabecera */
         .cabecera 
         {
-            background-image: url('https://via.placeholder.com/1200x600'); 
+            background-image: url('img/fonditocool.jpg'); /* Cambia la imagen de fondo aquí */
             background-size: cover;
             background-position: center;
-            height: 40vh;
+            height: 80vh;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start; 
             align-items: center;
+            padding-left: 20px;
             text-align: center;
             color: white;
             position: relative;
+           /* background-attachment: fixed;  */
+           background-attachment: fixed;
+            z-index: 0;
+        }
+        .cabecera::after
+         {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px; 
+            
+            
         }
 
-        .cabecera .titulo-pagina 
-        {
-            font-size: 2.5rem;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-            
-            font-family: 'Kode Mono', monospace;
+        .cabecera .titulo-pagina {
+            font-size: 3rem;
+            text-shadow: 3px 3px 5px rgba(56, 46, 46, 0.7);
+            z-index: 2; 
+            padding: 10px 30px;/
+        }
+        .cabecera .subtitulo {
+            font-size: 1.2rem;
+            color: white;
+            margin-top: 20px;
+            z-index: 2;
+            padding-left: 30px;
         }
 
        
@@ -70,7 +90,7 @@
             text-align: center;
             z-index: 10;
             font-family: 'Kode Mono', monospace;
-            
+            /**/
         }
 
         .barra-navegacion a 
@@ -87,17 +107,17 @@
             color: #f7a400;
         }
 
-       
+        /* S */
         section 
         {
             padding: 60px 20px;
             text-align: center;
         }
 
-      
+        /* Sobre mí */
         #sobre-mi 
         {
-           
+            /*background-color: #2c1e3d;*/
             background-color: #211e21;
         }
 
@@ -122,7 +142,7 @@
             margin-top: 20px;
         }
 
-       
+        /* Hobbies */
         #mis-hobbies 
         {
             background-color: #333;
@@ -140,7 +160,7 @@
             width: 400px;
             margin-top: 20px;
         }
-        
+        /*---------------------------*/
         .contenedor-hobbies 
         {
             display: flex;
@@ -171,7 +191,8 @@
             font-size: 3rem;
             margin-bottom: 10px;
         }
-       
+        /*.--------------------------------------*/
+        /* Habilidades */
         #mis-habilidades 
         {
             background-color: #444;
@@ -214,8 +235,50 @@
             font-size: 3rem;
             margin-bottom: 10px;
         }
+      
+        #mis-habilidades 
+        {
+            background-color: #444;
+        }
 
-    
+        #mis-habilidades h2 
+        {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #f7a400;
+        }
+
+        .contenedor-Cursos 
+        {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .caja-Cursos
+        {
+            background-color: #555;
+            color: white;
+            padding: 20px;
+            width: 30%;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .caja-Cursos:hover 
+        {
+            background-color: #f7a400;
+        }
+
+        .caja-Cursos i 
+        {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        /* Botones */
         .btn 
         {
             background-color: #27133c;
@@ -235,7 +298,6 @@
             background-color: rgb(255, 196, 102);  
         }
 
-     
         footer 
         {
             background-color: #333;
@@ -247,7 +309,7 @@
             width: 100%;
         }
 
-     
+      
         .redes-sociales a 
         {
             font-size: 2rem;
@@ -260,7 +322,7 @@
         {
             color: #f7a400;
         }
-               
+                
         .contenedor-cantantes 
         {
             display: flex;
@@ -269,39 +331,47 @@
             margin-top: 20px;
         }
 
-     
+       
         .caja-cantante 
         {
             background-color: #555;
             color: white;
-            width: 30%;
+            width: 25%;
             text-align: center;
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 10px;
             transition: background-color 0.3s ease;
         }
-
+/*
         .caja-cantante img 
         {
             width: 100%;
             border-radius: 10px;
             margin-bottom: 15px;
         }
-
+*/
+        .caja-cantante img 
+        {
+        width: 200px;     
+        height: auto;     
+        border-radius: 10px;
+        margin-bottom: 15px;
+        }
+        
         .caja-cantante:hover 
         {
             background-color: #f7a400;
         }
 
-
+     
         .caja-cantante h3 
         {
             font-size: 1.5rem;
             margin-bottom: 10px;
         }
 
-      
+        
         .caja-cantante a 
         {
             display: inline-block;
@@ -322,9 +392,10 @@
             background-color: #f7a400;
             color: black;
             background-color: rgb(255, 196, 102);  
-   
+            /*color: #27133c;  
+            border: 2px solid #f7a400; */ /* Borde amarillo */
         }
-        
+         /* Compañeros */
         #Compañeros 
         {
             background-color: #2c1e3d;
@@ -343,12 +414,17 @@
             margin-bottom: 30px;
         }
     
-        a {
+        a 
+        {
             color: white; 
             text-decoration: none; 
         }
 
-    
+        
+        a:hover 
+        {
+            color: #f7a400;  
+        }
 
 
     </style>
@@ -356,21 +432,24 @@
 
 <body>
 
+    <!-- Cabecera -->
     <div class="cabecera">
-        <h1 class="titulo-pagina">Alice Gabriela</h1>
+        <h1 class="titulo-pagina"> Hola soy, Alice Gabriela</h1>
+        <p class="subtitulo">Estudiante de Computer Science</p>
     </div>
 
-    
+    <!-- Barra de Navegación -->
     <nav class="barra-navegacion">
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#mis-hobbies">Hobbies</a>
         <a href="#mis-habilidades">Habilidades</a>
-        <a href="#cantantes-favoritos">Cantantes Favoritos</a>
+        <a href="#mis-cursos">Cursos</a>
+        <a href="#cantantes-favoritos">Gustos Musicales</a>
         <a href="#Compañeros">Compañeros</a>
         <a href="#contacto">Contacto</a>
     </nav>
 
-    
+    <!--Sobre mí -->
     <section id="sobre-mi" data-aos="fade-up">
         <h2>Sobre mí</h2>
         <p>Mi nombre es Alice Gabriela Sucasaca Ilasaca, tengo 18 años, actualmente me encuentro
@@ -384,11 +463,17 @@
     
     </section>
 
-   
+    <!-- Hobbies -->
     <section id="mis-hobbies" data-aos="fade-up">
         <h2>Mis Hobbies</h2>
         <p>Dormir.</p>
-
+      <!--  <div>
+            <i class="fas fa-guitar"></i> <span>Tocar guitarra</span><br>
+            <i class="fas fa-headphones"></i> <span>Escuchar música</span><br>
+            <i class="fas fa-camera"></i> <span>Fotografía</span><br>
+        </div>
+        <img src="https://via.placeholder.com/400" alt="Imagen relacionada con tus hobbies">
+        <a href="#" class="btn">Poner imagen de hobby</a>-->
         <div class="contenedor-hobbies">
             <div class="caja-hobbie" data-aos="flip-left">
                 <i class="fas fa-guitar"></i>
@@ -422,7 +507,7 @@
         </div>
     </section>
 
-    
+    <!--  Habilidades -->
     <section id="mis-habilidades" data-aos="fade-up">
         <h2>Mis Habilidades</h2>
         <div class="contenedor-habilidades">
@@ -446,40 +531,186 @@
             </div>
         </div>
     </section>
-
-<section id="cantantes-favoritos" data-aos="fade-up">
-    <h2>Mis Cantantes Favoritos</h2>
+   <!--  Cursos -->
+   <section id="mis-cursos" data-aos="fade-up">
+    <h2>Cursos</h2>
+    <div class="contenedor-Cursos">
+        
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-code"></i>
+            <h3>Introducción a Ciencia de la Computación </h3>
+        </div> 
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-code"></i>
+            <h3>Ciencia de la Computación 1</h3>
+           
+        </div>
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-code"></i>
+            <h3>Estructuras discretas 2</h3>
+        </div>
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-book"></i>
+            <h3>Matemática 2 </h3>
+        </div>
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-book"></i>
+            <h3>Introducción a la Filosofía </h3>
+        </div>
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-guitar"></i>
+            <h3>Apreciación Musical </h3>
+        </div>
+     
+        <a href="https://cs.ucsp.edu.pe/wp-content/uploads/2021/04/Malla-curricular-Ciencia-de-la-Computacion.pdf" target="_blank" > Malla Curricular de Ciencia de la Computación</a>   
+    </div>
+</section>
+   
+    <!-- Cantantes Favoritos -->
+<section id="cantantes-favoritos" data-aos="flip-left">
+    <h2>Gustos Musicales</h2>
     <p>Conoce mis cantantes favoritos y su música.</p>
     
     <div class="contenedor-cantantes">
+        <!--1-->
         <div class="caja-cantante">
-            <img src="https://via.placeholder.com/300x300?text=Freddy+Mercury" >
-            <h3>Freddy Mercury</h3>
-            <p> mi canción favorita es </p>
-            <a href="https://es.wikipedia.org/wiki/Freddy_Mercury" class="btn">Ver Wikipedia</a>
+            <img src="img/The Weeknd.jpg" alt="The weeknd">
+            <h3>The weeknd</h3>
+            
+            <a href="https://open.spotify.com/intl-es/artist/1Xyo4u8uXC1ZmMpatF05PJ?si=05WEP5l7QlCZ5LVw0bbi8g" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Escuchar en Spotify
+            </a>
+        </div>
+        <!--2-->
+        <div class="caja-cantante">
+            <img src="img/Chase atlantic.jpg" alt="Chase Atlantic">
+            <h3>Chase Atlantic</h3>
+            <a href="https://open.spotify.com/intl-es/artist/7cYEt1pqMgXJdq00hAwVpT?si=qovXI0BQTqm1mQvoXa_aHQ" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Escuchar en Spotify
+            </a>
+        </div>
+        <!--3-->
+        <div class="caja-cantante">
+            <img src="img/The Strokes.jpg" alt="The Strokes">
+            <h3>The Strokes</h3>
+            <a href="https://open.spotify.com/intl-es/artist/0epOFNiUfyON9EYx7Tpr6V?si=Z-8o45xvRAC-3131sDR-RA" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Escuchar en Spotify
+            </a>
+        </div>
+        <!--4-->
+        <div class="caja-cantante">
+            <img src="img/VideoClub.jpg" alt="Adele Castillon">
+            <h3>Adèle Castillon - VideoClub</h3>
+            <a href="https://open.spotify.com/intl-es/artist/4ueh4hmRvt62k4BgP8dIS0?si=eHtl-VuETDibScILhqaqXw" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Adèle Castillon
+            </a>
+            <a href="https://open.spotify.com/intl-es/artist/3rp4f58JlRHkk8hpdLCer1?si=4JPvoQlpTQuPkqdwSt49GA" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> VideoClub
+            </a>
+        </div>
+        <!--5-->
+        <div class="caja-cantante">
+            <img src="img/Centimillimental.jpg" alt="The Strokes">
+            <h3>Centimillimental</h3>
+            <a href="https://open.spotify.com/intl-es/artist/0aRqEPPTtQd3pGuB4tJxVw?si=GBPivva9SB6RW_vcs4ZZpg" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Escuchar en Spotify
+            </a>
+        </div>
+        <!--6-->
+        <div class="caja-cantante">
+            <img src="img/Joe Hisaishi.jpg" alt="The Strokes">
+            <h3>Joe Hisaishi</h3>
+            <a href="https://open.spotify.com/intl-es/artist/7nzSoJISlVJsn7O0yTeMOB?si=tnL-CROcSyGscFcQ-R2-6w" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Escuchar en Spotify
+            </a>
+        </div>
+        <!--7-->
+        <div class="caja-cantante">
+            <img src="img/Pedro Suarez Vertiz.jpg" alt="The Strokes">
+            <h3>Pedro Suárez Vértiz</h3>
+            <a href="https://open.spotify.com/intl-es/artist/3Azj8v21CQ76AVvjuNv5Vg?si=1G58x7P2TuK3Vw4WTuEWIg" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Escuchar en Spotify
+            </a>
+        </div>
+         <!--8-->
+         <div class="caja-cantante">
+            <img src="img/Françoise Hardy.jpg" alt="The Strokes">
+            <h3>Françoise Hardy</h3>
+            <a href="https://open.spotify.com/intl-es/artist/7x3f7c0fBanNlQwpx1255g?si=Dl_O_w65SmiJAxdHIvSQgw" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Escuchar en Spotify
+            </a>
+        </div>
+         <!--9-->
+         <div class="caja-cantante">
+            <img src="img/Hombres G.jpg" alt="The Strokes">
+            <h3>Hombres G</h3>
+            <a href="https://open.spotify.com/intl-es/artist/60uh2KYYSCqAgJNxcU4DA0?si=qavlzUzyR9qZNfZSogZYrQ" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Escuchar en Spotify
+            </a>
+        </div>
+         <!--10-->
+         <div class="caja-cantante">
+            <img src="img/Lady Gaga.jpg" alt="The Strokes">
+            <h3>Lady Gaga</h3>
+            <a href="https://open.spotify.com/intl-es/artist/1HY2Jd0NmPuamShAr6KMms?si=Tr6lgg4JTB2bE9wdrzZSPQ" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Escuchar en Spotify
+            </a>
+        </div>
+        
+         <!--11-->
+         <div class="caja-cantante">
+            <img src="img/Artic Monkeys.jpg" alt="The Strokes">
+            <h3>Artic Monkeys</h3>
+            <a href="https://open.spotify.com/intl-es/artist/7Ln80lUS6He07XvHI8qqHH?si=O7er1zo1R02zPHoE0c213w" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Escuchar en Spotify
+            </a>
+        </div>
+        
+         <!--12-->
+         <div class="caja-cantante">
+            <img src="img/The Neighbourhood.jpg" alt="The Strokes">
+            <h3>The Neighbourhood</h3>
+            <a href="https://open.spotify.com/intl-es/artist/77SW9BnxLY8rJ0RciFqkHh?si=xl0n7NjsSSOT7jPVuHky_w" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Escuchar en Spotify
+            </a>
+        </div>
+<!--
+         
+         <div class="caja-cantante">
+            <img src="https://via.placeholder.com/300x300?text=Ariana+Grande" alt="The Strokes">
+            <h3>Pedro Suárez Vértiz</h3>
+            <a href="" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Escuchar en Spotify
+            </a>
         </div>
         
         <div class="caja-cantante">
-            <img src="https://via.placeholder.com/300x300?text=Ariana+Grande">
-            <h3>Ariana Grande</h3>
-            <a href="https://es.wikipedia.org/wiki/Ariana_Grande" class="btn">Ver Wikipedia</a>
-        </div>
-        
-        <div class="caja-cantante">
-            <img src="https://via.placeholder.com/300x300?text=Michael+Jackson" ">
-            <h3>Michael Jackson</h3>
-            <a href="https://es.wikipedia.org/wiki/Michael_Jackson" class="btn">Ver Wikipedia</a>
-        </div>
+           <img src="https://via.placeholder.com/300x300?text=Ariana+Grande" alt="The Strokes">
+           <h3>Pedro Suárez Vértiz</h3>
+           <a href="" target="_blank" class="spotify-link">
+               <i class="fab fa-spotify"></i> Escuchar en Spotify
+           </a>
+       </div>
+       
+       <div class="caja-cantante">
+        <img src="https://via.placeholder.com/300x300?text=Ariana+Grande" alt="The Strokes">
+        <h3>Pedro Suárez Vértiz</h3>
+        <a href="" target="_blank" class="spotify-link">
+            <i class="fab fa-spotify"></i> Escuchar en Spotify
+        </a>
+    </div>
+-->
     </div>
 </section>
     
+    <!--  Compañeros -->
     <section id="Compañeros" data-aos="fade-up">
         <h2>Visita las paginas de mis compañeros</h2>
         <p>poner link de compañerps </p>
 
     
     </section>
-
+    <!--  Contacto -->
     <section id="contacto" data-aos="fade-up">
         <h2>Contacto</h2>
         <p>Si quieres saber más sobre mí o colaborar en algún proyecto, no dudes en ponerte en contacto.</p>
@@ -487,12 +718,14 @@
         <div class="redes-sociales">
             <a href="#" class="fab fa-facebook"></a>
             <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-instagram"></a>
-       
-            
-            <a href="-" target="_blank">
+            <a href="#" class="fab fa-spotify"></a>
+            <!--<a href="#" class="fab fa-linkedin"></a>-->
+            <a href=" https://pe.linkedin.com/in/alice-gabriela-sucasaca-ilasaca-644187329" target="_blank">
+                <i class="fab fa-instagram"></i> 
+
+            <a href=" https://pe.linkedin.com/in/alice-gabriela-sucasaca-ilasaca-644187329" target="_blank">
                 <i class="fab fa-linkedin"></i> 
-            <a href="-" target="_blank">
+            <a href="https://https:github.com/Alice-Gabriela-Sucasaca-I" target="_blank">
                 <i class="fab fa-github"></i> 
             </a>
             
@@ -500,18 +733,18 @@
         <a href="#" class="btn">Contactar</a>
     </section>
 
- 
+    
     <footer>
         <p>© 2024 Mi Página Personal - Todos los derechos reservados obvio</p>
     </footer>
 
-  
+    
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script> 
     <script>
         AOS.init
         (
             {
-            duration: 1200, 
+            duration: 1200,
             }
         );
     </script>

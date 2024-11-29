@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -583,25 +583,41 @@
             }
         }
 
-        @media screen and (max-width: 480px) 
-        {
-            .cabecera .titulo-pagina 
-            {
-                font-size: 2rem;
-            }
+     @media (max-width: 480px) {
+    .cabecera .titulo-pagina {
+        font-size: clamp(1.2rem, 5vw, 1.5rem);
+    }
+    .cabecera .subtitulo {
+        font-size: 1rem;
+    }
+    .caja-hobbie, .caja-habilidad, .caja-cantante {
+        width: 90%;
+    }
+    #sobre-mi h2 {
+        font-size: clamp(1.2rem, 5vw, 1.5rem);
+    }
+    #sobre-mi p {
+        font-size: 0.9rem;
+        max-width: 90%;
+    }
+    #sobre-mi .contenido {
+        padding-left: 1cm;
+        padding-right: 1cm;
+    }
+    .barra-navegacion a {
+        font-size: 0.8rem;
+        margin: 8px 10px;
+    }
+    .barra-navegacion {
+        justify-content: space-around;
+    }
+    .caja-Cursos {
+        padding: 15px;
+        width: 90%;
+        max-width: 90%;
+    }
+}
 
-            .cabecera .subtitulo 
-            {
-                font-size: 1rem;
-            }
-
-            .caja-hobbie,
-            .caja-habilidad,
-            .caja-cantante 
-            {
-                width: 90%;
-            }
-        }
                
         @media (max-width: 768px) 
         {
@@ -628,31 +644,7 @@
             }
         }
 
-        @media (max-width: 480px) 
-        {
-            #sobre-mi h2 
-            {
-                font-size: clamp(1.2rem, 5vw, 1.5rem); 
-            }
 
-            #sobre-mi p
-            {
-                font-size: 0.9rem;
-                max-width: 90%;
-            }
-            /*
-            #sobre-mi img 
-            {
-                width: 120px; 
-            }
-            */
-          
-            #sobre-mi .contenido 
-            {
-                padding-left: 1cm;
-                padding-right: 1cm;
-            }
-        }
                
         @media (max-width: 768px) 
         {
@@ -668,27 +660,7 @@
         }
 
    
-        @media (max-width: 480px) 
-        {
-            .barra-navegacion a 
-            {
-                font-size: 0.8rem;
-                margin: 8px 10px; 
-            }
-            .barra-navegacion 
-            {
-                justify-content: space-around; 
-            }
-        }
-        @media (max-width: 480px) 
-        {
-            .caja-Cursos
-             {
-                padding: 15px;
-                width: 90%; 
-                max-width: 90%; 
-            }
-        }
+      
     </style>
 </head>
 
